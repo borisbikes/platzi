@@ -1,0 +1,36 @@
+<html>
+	<header>
+		<meta charset = 'UTF8'>
+		<title>Tu peso en un lugar donde pesas menos</title>
+	<header>
+	<body>
+		<h1>Your weight in other planet</h1>
+		<p>In the Eart you weight is different than another planet.</p>
+		
+		<script type="text/javascript">
+		    var planeta;
+			var opc = prompt("Choose a planet: \n 1= mars, 2= jupiter");
+			var usuario = prompt("How much do you weight?");
+			var g_tierra = 9.8;
+			var g_marte = 3.7;
+			var g_jupiter = 24.8;
+			var mi_peso = parseFloat(usuario);
+			var peso_final = 0;
+			if(opc == "1"){
+				peso_final = mi_peso * g_marte / g_tierra;
+				planeta = "MARS";
+			}else if (opc == "2"){
+				peso_final = mi_peso * g_jupiter / g_tierra;
+				planeta = "JUPITER";
+			}else{
+				peso_final = 100000.12345;
+				planeta = "KRYPTON"
+			
+			}
+			
+			document.write("<p>My weight in "+ planeta + " is: <strong>" + peso_final.toFixed(2) + "</strong> Kg.</p>");
+			document.write("My weight in "+ planeta + " in integer is: <strong>" + parseInt(peso_final) + "</strong> Kg.");
+			
+		</script>
+	</body>
+</html>
