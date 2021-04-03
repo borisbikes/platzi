@@ -1,0 +1,169 @@
+
+<!-- index is the main file  where we can find different links to see more information
+    or others html files. Also index file is where the server check by default the main file
+     if it doesn't exist we have to set up, of the contrary the user will be able to se the folder 
+     structure
+-->
+<!--setting up html version-->
+<!DOCTYPE html>
+
+<!--This is the main container or container parent, it has all the content tag from our project
+ attribute lang allows to set up the language of our web site-->
+<html lang="es">
+
+    <!--  
+        THE HUMAN BRAIN: our thinks, orders (we cannot see our thinkings)
+
+        this place the most important content where the browser will upload at fist
+        like the configuration, dependencies,external libraries (fonts, css)
+        These content we won't be able to see.
+    -->
+    <head>
+        
+        <!--
+            charset attribute:  
+            contain the configuration of the character group of symbol 
+            or special ones of a language, 
+            UTF-8 supports: ,ñ, á, ü also emojis 😄 👍
+        -->
+        <meta charset="UTF-8"/>
+
+        <!-- 
+            name attribute 'description':
+            helps to the search engines to find our page more relevant than others 
+            thanks to the  information that have been setting on the 
+            'content attribute'. That text we will show that in the description of our site
+            in the motor engine results (What's this page about...)
+
+            However the motor engines have other ways to find our site more relevant 
+            like organic search, also depends on the way that we write our web contents
+            
+            SEO: is a role that a person helps our site will be more relevant for motor engines
+        -->
+        <meta name="description" content="This place will show you the correct way to build a web page"/>
+
+        <!--
+            name attribute robots:
+            with this attribute we are enable to the robots from the motor engines to make more relevant those 
+            key words
+        -->
+        <meta name="robots" content="index,follow">
+
+        <!-- 
+            those meta attributes enable our project as a responsive design especially to mobile phones
+            'viewport' is related at the width size screen that the page has been showed
+            'content' it allows to show the page depends on the screen in the correct text size without to use the zoom tool
+        -->
+        <meta name="viewport" content="width=devise-width, initial-scale=1.0"/>
+
+        <!--
+            link attribute allows us to set an external CSS file in our web project
+        -->
+        <link rel="stylesheet" href="./07_Index-y-estructura-basica/css/style.css">
+    
+        <!--
+            that tag allows us to set the website title that we can show in the browser tab
+         -->
+        <title>The Page Anatomy learned</title>
+    
+    </head>
+
+    <!--  THE HUMAN BODY: the movements, actions (we can see everything )
+        This place has the content that we can see it
+        such us text content, images, videos, interactive things, so on.
+
+        There are container tags and content tags
+        container tags: they have more tag inside itself and also helps to build our page 
+        according to _THE ANATOMY PAGE_
+
+        content tags: they have the text, images, videos or everything that will be rendered
+
+        - Semantic HTML 5 
+        Below we can find the Layout 'maquetacion' from our site, through the tags that tell us what is the 
+        specific area or part of our page according to the anatomy page design, 
+        We must use that structure just as good practices putting the information in the right side
+
+    -->
+    <body>
+        <!--
+            This tag represents the HEADER area according to the anatomy page.
+        -->
+        <header>
+            <!--
+                nav tag allows to set a Navigation Bar in the header area
+            -->
+            <nav></nav>
+        </header>
+
+            <!--
+                represent the MAIN area to show the principal content of this page
+                according to the anatomy page.
+            -->
+        <main>
+
+            <!--
+                first section
+                inside MAIN area we can divide the information in sections where
+                we can find articles to write the content
+                in an order way
+            -->
+            <section>
+                <article>
+                    <img src="./07_Index-y-estructura-basica/media/page-anatomy.jpg" alt="Page-Anatomy">
+                </article>
+            </section>
+
+            <!--second section 
+                we can show inside an article another information-->
+            <section>
+                <article>
+
+                    <!--unordered list by bullets -->
+                    <ul>
+                        
+                        <!--
+                            'list item': it allows us to write a content to each item from the list -->
+                        <li>some item</li>
+                        <li>another item</li>
+                    </ul>
+
+                    <!--ordered list by numbers asc-->
+                    <ol>
+
+                        <li>fist item</li>
+                        <li>second item</li>
+                    </ol>
+
+                </article>
+            </section>
+        </main>
+
+        <!-- 
+            FOOTER area from this page according to the anatomy page.
+        -->
+        <footer>
+
+        </footer>           
+
+
+        <!--
+            CONTENT TAGS
+        -->
+        <p>I'm a paragraph</p>
+
+        <!--Titles goes grom the biggest <h1> to the smallest <h6> title-->
+        <h1>I'm the biggest title</h1>
+        <h3>I'm the middle titles</h3>
+        <h6>I'm the smallest title</h6>
+
+        <!--
+            Anchor tag allows us to make an link / hyperlink
+            <a href=""></a> it send us at the other page, if we don't set up anything it works light similar as F5 key
+            <a href="#"></a> it stays in this page forbidding to refresh this page
+         -->
+        <a href="">I'm a link that works as F5 refresh page</a><br>
+        <a href="#">I'm a link that forbidding to refresh this page</a>
+        </a>
+
+    </body>
+</html>
