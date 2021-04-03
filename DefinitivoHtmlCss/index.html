@@ -109,6 +109,7 @@
             -->
             <section>
                 <article>
+                    <h3>Page-Anatomy</h3>
                     <img src="./07_Index-y-estructura-basica/media/page-anatomy.jpg" alt="Page-Anatomy">
                 </article>
             </section>
@@ -117,6 +118,7 @@
                 we can show inside an article another information-->
             <section>
                 <article>
+                    <h3>Lists</h3>
 
                     <!--unordered list by bullets -->
                     <ul>
@@ -136,6 +138,116 @@
 
                 </article>
             </section>
+
+            <section>
+                <article>
+
+                    <h3>Content Tags</h3>
+
+                    <!--
+                        CONTENT TAGS
+                    -->
+                    <p>I'm a paragraph</p>
+
+                    <!--Titles goes from the biggest <h1> to the smallest <h6> title-->
+                    <h1>I'm the biggest title</h1>
+                    <h3>I'm the middle of the titles</h3>
+                    <h6>I'm the smallest one</h6>
+
+                    <!--
+                        Anchor tag allows us to make an link / hyperlink
+                        <a href=""></a> it send us at the other page, if we don't set up anything it works light similar as F5 key
+                        <a href="#"></a> it stays in this page forbidding to refresh this page
+                    -->
+                    <a href="">I'm a link that works as F5 refresh page</a><br>
+                    <a href="#">I'm a link that forbidding to refresh this page</a>
+                    
+                    <!--
+                        TAG ANATOMY 
+                        
+                        <a href="#">I'm a link that forbidding to refresh this page</a>
+                        |_____________________________________________________________| element
+                        
+                        opening tag: <a href="#">
+                        tag name: a
+                        attribute: href="#"
+                        attribute name: href
+                        attribute value: #
+                        content: I'm a link that forbidding to refresh this page
+                        close tag: </a>
+
+                    -->
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h3>Tag-Anatomy</h3>
+                    <img src="./07_Index-y-estructura-basica/media/tag-anatomy.png" alt="tag-anatomy" height=50% width=50%>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h3>Images-Types</h3>
+                    <img src="./07_Index-y-estructura-basica/media/image-type.jpg" alt="image-types">
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <!--
+                        Optimizing Images
+                        It's not convenient to upload images more than 3 MB that's to heavy
+                        
+                        TIP: To name some folders they mustn't have any spaces inside, in those cases replace with '-' or '_',
+                             cause the browsers cannot read them.
+                    -->
+                    <h3>Optimizing Images</h3>
+                    <p>The optimum average image size for rendering in a web page is between: 70 - 100 KB.</p>
+
+                    <!--
+                        Figure tag, tell us in that place going an image inside it.
+                    -->
+                    <figure>
+
+                        <!--
+                        in this tag 'img' has an attribute 'alt' witch value must have the description of that picture in case the
+                        browser cannot read it or cannot find it, those cases the browser will show us a small icon of an image broken 
+                        and the description from this attribute value.
+                        -->
+                        <img src="./07_Index-y-estructura-basica/media/optimal-size-img.jpg" alt="image-size">
+                    <figure>
+                    
+                    <ul>
+                        <li>
+                            <!--
+                                This page helps us to compress our images around the 60% without losing to much quality
+                            -->
+                            <a href="https://tinypng.com/">Tiny compress PNG and JPEG</a>
+                            <p>
+                                <img src="./07_Index-y-estructura-basica/media/compress-img.jpg" alt="example-compress-tinny">
+                            </p>
+                        </li>
+                            
+                        <li>
+                            <!--
+                                This tool allows us to remove every meta data information from our pictures that 
+                                have been taken from a digital camera or any mobile devise like data, time, 
+                                camera used, and sometimes gps coordinates. Cause that metadata can add some extra size.
+                            -->
+                            <a href="https://www.verexif.com/en/">Verexif check and remove Exif data</a>
+                        </li>
+
+                        <li>
+                            <!--
+                                This page has a lot of videos and photos for free downloading with higher resolution
+                            -->
+                            <a href="https://www.pexels.com/">Pexels, the best free stock photos & videos</a>
+                        </li>
+                    </ul>
+                </article>
+            </section>
         </main>
 
         <!-- 
@@ -146,24 +258,8 @@
         </footer>           
 
 
-        <!--
-            CONTENT TAGS
-        -->
-        <p>I'm a paragraph</p>
+        
 
-        <!--Titles goes from the biggest <h1> to the smallest <h6> title-->
-        <h1>I'm the biggest title</h1>
-        <h3>I'm the middle titles</h3>
-        <h6>I'm the smallest title</h6>
-
-        <!--
-            Anchor tag allows us to make an link / hyperlink
-            <a href=""></a> it send us at the other page, if we don't set up anything it works light similar as F5 key
-            <a href="#"></a> it stays in this page forbidding to refresh this page
-         -->
-        <a href="">I'm a link that works as F5 refresh page</a><br>
-        <a href="#">I'm a link that forbidding to refresh this page</a>
-        </a>
 
     </body>
 </html>
