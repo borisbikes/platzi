@@ -4,24 +4,28 @@
      if it doesn't exist we have to set up, of the contrary the user will be able to se the folder 
      structure
 -->
-<!--setting up html version-->
+<!--
+    DOCTYPE: 
+    Where we are setting up html version in this case Html 5
+-->
 <!DOCTYPE html>
 
-<!--This is the main container or container parent, it has all the content tag from our project
- attribute lang allows to set up the language of our web site-->
+<!--
+    HTML:
+    This is the main container or container parent, it has all the content tag from our project
+    attribute lang allows to set up the language of our web site-->
 <html lang="es">
 
     <!--  
-        THE HUMAN BRAIN: our thinks, orders (we cannot see our thinkings)
-
-        this place the most important content where the browser will upload at fist
+        HEAD  -  THE HUMAN BRAIN: our thinks, orders (we cannot see our thinkings)
+        This place the most important content where the browser will upload at fist
         like the configuration, dependencies,external libraries (fonts, css)
         These content we won't be able to see.
     -->
     <head>
         
         <!--
-            charset attribute:  
+            Charset attribute:  
             contain the configuration of the character group of symbol 
             or special ones of a language, 
             UTF-8 supports: ,ñ, á, ü also emojis 😄 👍
@@ -29,7 +33,7 @@
         <meta charset="UTF-8"/>
 
         <!-- 
-            name attribute 'description':
+            Description:
             helps to the search engines to find our page more relevant than others 
             thanks to the  information that have been setting on the 
             'content attribute'. That text we will show that in the description of our site
@@ -43,32 +47,45 @@
         <meta name="description" content="This place will show you the correct way to build a web page"/>
 
         <!--
-            name attribute robots:
-            with this attribute we are enable to the robots from the motor engines to make more relevant those 
+            Robots:
+            This name attribute enables to the robots from the motor engines to make more relevant those 
             key words
         -->
         <meta name="robots" content="index,follow">
 
         <!-- 
-            those meta attributes enable our project as a responsive design especially to mobile phones
+            Viewport:
+            This meta attributes enable our project as a responsive design especially to mobile phones
             'viewport' is related at the width size screen that the page has been showed
             'content' it allows to show the page depends on the screen in the correct text size without to use the zoom tool
         -->
         <meta name="viewport" content="width=devise-width, initial-scale=1.0"/>
 
         <!--
-            link attribute allows us to set an external CSS file in our web project
+            Link attribute:
+            That's the first way to add style to our page in a global way
+            to allow us to set an external CSS file in our web project
         -->
         <link rel="stylesheet" href="./07_Index-y-estructura-basica/css/style.css">
-    
+        
         <!--
-            that tag allows us to set the website title that we can show in the browser tab
+            Style:
+            This tag allows us to set up styles in this page, that's no a good practice to mix CSS HTML and JS
+            because it'll be difficult to maintain it also we cannot reuse those styles.
+            But we can use this way in necessary cases but in a minimum potion.
+        -->
+        <style></style>
+        <!--
+            Title:
+            that tag allows us to set the website title where we can show in the browser tab
          -->
         <title>The Page Anatomy learned</title>
     
     </head>
 
-    <!--  THE HUMAN BODY: the movements, actions (we can see everything )
+    <!--  
+        BODY -  THE HUMAN BODY: 
+        the movements, actions (we can see everything )
         This place has the content that we can see it
         such us text content, images, videos, interactive things, so on.
 
@@ -86,50 +103,63 @@
     -->
     <body>
         <!--
+            HEADER:
             This tag represents the HEADER area according to the anatomy page.
         -->
         <header>
             <!--
+                ID Style:
+                That means that to set up the styles through ID.
+            -->
+            <h1 id="header-page">HTML AND CSS COURSE</h1>
+            <!--
+                Nav:
                 nav tag allows to set a Navigation Bar in the header area
             -->
             <nav></nav>
         </header>
 
             <!--
+                MAIN:
                 represent the MAIN area to show the principal content of this page
                 according to the anatomy page.
             -->
         <main>
 
             <!--
-                first section
-                inside MAIN area we can divide the information in sections where
-                we can find articles to write the content
-                in an order way
+                Section:
+                Inside MAIN area we can divide the information in sections where
+                we can find <articles>, <figures> <videos> to show the content in a syntactical way
             -->
             <section>
                 <article>
                     <h3>Page-Anatomy</h3>
-                    <img src="./07_Index-y-estructura-basica/media/page-anatomy.jpg" alt="Page-Anatomy">
+                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/page-anatomy.jpg" alt="Page-Anatomy">
+                    </figure>
                 </article>
             </section>
 
-            <!--second section 
-                we can show inside an article another information-->
             <section>
                 <article>
                     <h3>Lists</h3>
 
-                    <!--unordered list by bullets -->
+                    <!--
+                        UL:
+                        Unordered list allows tho show a list of elements by bullets.
+                     -->
                     <ul>
                         
                         <!--
-                            'list item': it allows us to write a content to each item from the list -->
+                            LI:
+                            List item, it allows us to write a content to each item from the lists -->
                         <li>some item</li>
                         <li>another item</li>
                     </ul>
 
-                    <!--ordered list by numbers asc-->
+                    <!--
+                        OL:
+                        Ordered list by numbers asc-->
                     <ol>
 
                         <li>fist item</li>
@@ -145,7 +175,8 @@
                     <h3>Content Tags</h3>
 
                     <!--
-                        CONTENT TAGS
+                        CONTENT TAGS:
+                        Means that inside the open and closure tag there is a content to show in our pages.
                     -->
                     <p>I'm a paragraph</p>
 
@@ -155,12 +186,13 @@
                     <h6>I'm the smallest one</h6>
 
                     <!--
-                        Anchor tag allows us to make an link / hyperlink
+                        Anchor tag:
+                        Allows us to make an link / hyperlink
                         <a href=""></a> it send us at the other page, if we don't set up anything it works light similar as F5 key
                         <a href="#"></a> it stays in this page forbidding to refresh this page
                     -->
                     <a href="">I'm a link that works as F5 refresh page</a><br>
-                    <a href="#">I'm a link that forbidding to refresh this page</a>
+                    <a href="#">I'm a link that forbid to refresh this page</a>
                     
                     <!--
                         TAG ANATOMY 
@@ -183,55 +215,73 @@
             <section>
                 <article>
                     <h3>Tag-Anatomy</h3>
-                    <img src="./07_Index-y-estructura-basica/media/tag-anatomy.png" alt="tag-anatomy" height=50% width=50%>
+                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/tag-anatomy.png" alt="tag-anatomy" height=50% width=50%>
+                    </figure>
                 </article>
             </section>
 
             <section>
                 <article>
                     <h3>Images-Types</h3>
-                    <img src="./07_Index-y-estructura-basica/media/image-type.jpg" alt="image-types">
+                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/image-type.jpg" alt="image-types">
+                    </figure>
                 </article>
             </section>
 
             <section>
                 <article>
                     <!--
-                        Optimizing Images
+                        Optimizing Images:
                         It's not convenient to upload images more than 3 MB that's to heavy
                         
-                        TIP: To name some folders they mustn't have any spaces inside, in those cases replace with '-' or '_',
-                             cause the browsers cannot read them.
+                        TIP: 
+                        To name some folders they mustn't have any spaces inside, in those cases replace with '-' or '_',
+                        cause the browsers cannot read them.
                     -->
                     <h3>Optimizing Images</h3>
-                    <p>The optimum average image size for rendering in a web page is between: 70 - 100 KB.</p>
+                    <p>The optimum average image size for rendering in a quick way our web page is:</p>
 
                     <!--
-                        Figure tag, tell us in that place going an image inside it.
+                        Figure tag:
+                        Tell us in that place goes an image or more inside it and this is a 
+                        semantic good practice to tell the browser that it comes an image.
+                        .
                     -->
                     <figure>
 
                         <!--
-                        in this tag 'img' has an attribute 'alt' witch value must have the description of that picture in case the
-                        browser cannot read it or cannot find it, those cases the browser will show us a small icon of an image broken 
-                        and the description from this attribute value.
+                            Alt attribute:
+                            in this tag 'img' has an attribute 'alt' witch value must have the description of that picture in case the
+                            browser cannot read it or cannot find it, those cases the browser will show us a small icon of an image broken 
+                            and the description from this attribute value.
                         -->
-                        <img src="./07_Index-y-estructura-basica/media/optimal-size-img.jpg" alt="image-size">
-                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/optimal-size-img.jpg" alt="image-size">
+                        <img src="./07_Index-y-estructura-basica/media/images/optimal-size-imgjpg" alt="image-size-100-KB">
+                        <!--
+                            FigureCaption: 
+                            This tag helps us to show in a visible way the description or extra information
+                            in its foot telling us what's that image about.
+                        -->
+                        <figcaption>We should upload images between: 70 - 100 KB</figcaption>
+                    </figure>
                     
                     <ul>
                         <li>
                             <!--
+                                tinypng.com:
                                 This page helps us to compress our images around the 60% without losing to much quality
                             -->
                             <a href="https://tinypng.com/">Tiny compress PNG and JPEG</a>
-                            <p>
-                                <img src="./07_Index-y-estructura-basica/media/compress-img.jpg" alt="example-compress-tinny">
-                            </p>
+                            <figure>
+                                <img src="./07_Index-y-estructura-basica/media/images/compress-img.jpg" alt="example-compress-tinny">
+                            </figure>
                         </li>
                             
                         <li>
                             <!--
+                                verexif.com:
                                 This tool allows us to remove every meta data information from our pictures that 
                                 have been taken from a digital camera or any mobile devise like data, time, 
                                 camera used, and sometimes gps coordinates. Cause that metadata can add some extra size.
@@ -241,6 +291,7 @@
 
                         <li>
                             <!--
+                                pexels.com:
                                 This page has a lot of videos and photos for free downloading with higher resolution
                             -->
                             <a href="https://www.pexels.com/">Pexels, the best free stock photos & videos</a>
@@ -248,13 +299,308 @@
                     </ul>
                 </article>
             </section>
+
+            <section>
+                <article>
+                    <h3>Video</h3>
+
+                    <!---
+                        Video: m4v, mp4
+                        <video src="./07_Index-y-estructura-basica/media/videos/Deadpool-Scene.mp4">
+                        this tag allows us to show videos in our page
+                        controls: attribute that enables the video controls
+                        preload: allows that the video stats to render just after the page starts loading in the browser
+                                 not when the video is played
+                        src:#t=10,20 tells the browser in witch minute we want the video starts and pause in a specific time
+                        source tag: enable to set different type of video formats to made sure that our browser can play it
+                                    in case that the browser can understand that format goes on checking the next one.
+                                    that tag doesn't mean that we'll show more than one video, it just shows us the first one 
+                                    that is being compatible with the browser.  
+                    -->
+                        <video controls
+                               preload="auto" >
+                            <source src="./07_Index-y-estructura-basica/media/videos/Deadpool-Scene.m4v#t=40,45" />
+                            <source src="./07_Index-y-estructura-basica/media/videos/Deadpool-Scene.mp4#t=40,45" />
+                        </video>
+                    
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h3>Forms</h3>
+                    
+                    <!--bad practice-->
+                    <div>
+                        <input type="text">
+                        <input type="text">
+                        <input type="text">
+                    </div>
+
+                    <!--
+                        Form:
+                        good semantic practice, we are using the right tag to each specific thing
+                        and is a easy way to read the code and find the object from our project
+
+                        action attribute:
+                        setting up to witch url (endpoint) we are submitting the information that has been filled in this form
+                    -->
+                    <p>
+                        <ul>
+                            <li>
+                                <a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input">Different input types available.</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <form>
+                        <!--
+                            Label:
+                            This tag has the setup for each the input element from this form, it has to be the same name 
+                            to the input id attribute. 
+                            label.for == Input.id
+                            span: Setting the visual label for this input element in our page
+                            input.type: tell us witch type of data is valid to set in this element
+                                        text, date, time, number, week, month, email, submit
+                            input.placeholder: allows us to set some example text inside the element input 
+                                                also helps the user to know what kind of answer we want to fill him it.
+                            input.name: tell in the endpoint what's the name of this info is being sended by each input element
+                        -->
+                        <p>
+                            User From
+                        </p>
+                        
+                        <label for="name">
+                            <span>What's your name?</span>
+                            <input type="text" id="name" placeholder="Andrew" name="student-name">
+                        </label>
+
+                        <label for="start-platzi">
+                            <span>Witch day did you start to studding at Platzi?</span>
+                            <input type="date" id="start-platzi" name="begin">
+                        </label>
+
+                        <label for="favorite-schedule">
+                            <span>Which schedule would you rater study?</span>
+                            <input type="time" id="favorite-schedule" name="schedule">
+                        </label>
+                        <p>
+                            Calendar Form
+                        </p>
+
+                        <label for="hour">
+                            <span>What time is it?</span>
+                            <input type="time" id="hour" name="hour">
+                        </label>
+
+                        <label for="day">
+                            <span>What day is today?</span>
+                            <input type="date" id="day" name="day">
+                        </label>
+
+                        <label for="week">
+                            <span>Witch week is now?</span>
+                            <input type="week" id="week" name="week">
+                        </label>
+
+                        <label for="month">
+                            <span>Witch month is now?</span>
+                            <input type="month" id="month" name="month">
+                        </label>
+
+                        </p>
+                        <!--
+                            input.type.datetime-local:
+                            Another practical way to show a calendar
+                        -->
+                        <label for="calendar">
+                            <span>Another Calendar input</span>
+                            <input type="datetime-local" id="calendar" name="calendar">
+                        </label>
+
+                        <!--
+                            input.submit:
+                            this input type allows to show a button to help to SEND the information that has been filled
+                            in this form
+                        -->
+                        <input type="submit">
+
+                    </form>
+                </article>
+            </section>
+
+
+            <section>
+
+                <!--
+                    Friendly Forms
+                    input.autocomplete:
+                    Usually our user has filled many forms before in other pages, and what about if the browser helps him to 
+                    autocomplete some information that it knows, such us:
+                    user name, address, email, some logins, credit card number, and so on.
+
+                    input.required
+                    Make sure that all data information must be filled out in this form before to send it.
+                -->
+                <h3>Friendly Forms</h3>
+
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Atributos/autocomplete">
+                        Different values available for autocomplete attribute</a>
+                    </li>
+                </ul>
+                <form>
+
+                    <label for="user-name">
+                        <samp>What's your name?</samp>
+                        <input type="text" id="user-name" name="name" autocomplete="name" required>
+                    </label>
+
+                    <label for="email">
+                        <samp>What's your e-mail address?</samp>
+                        <!--
+                            input.type.email: 
+                            allows to valid the right structure of email address in the content of this input element
+                        -->
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </label>
+
+                    <label for="country">
+                        <samp>Where are you come form?</samp>
+                        <input type="text" id="country" name="country" autocomplete="country" required>
+                    </label>
+
+                    <label for="postal-code">
+                        <samp>What's your postal code?</samp>
+                        <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" required>
+                    </label>
+
+                    <!--
+                        Select: (old school)
+                        This tag allows us to chose a value from a specific list of values
+
+                        Option: 
+                        Allows us to write an item for the list, 
+                        
+                        option.value: 
+                        It's the value that will be saved.
+                    -->
+                    <span>Which course have you seen before?</span>
+                    <select name="courses" id="">
+                        <option value="js">JavaScript</option>
+                        <option value="html5">HTML 5</option>
+                        <option value="css3">CSS 3</option>
+                        <option value="ws">Web Standards</option>
+                    </select>
+
+                    <!--
+                        input.list: (new school)
+                        That's a  mix between a input text with a select list.
+                        This tag allows us to chose a value from a specific list of values, in a smart way
+                        cause it enables a text area to start to write some letters from the word that we are 
+                        searching to reduce the option list available. In case that it doesn't exist it's possible 
+                        to send that information.
+
+                        datalist: 
+                        that tag groups the item list ,  input.list == datalist.id
+                        input
+                        option.value: 
+                        It's the value that will be saved.
+                    -->
+                    <label for="">
+                        <span>What course would you like to study?</span>
+                        <input list="courses2">
+                            
+                            <datalist id="courses2">
+                            
+                                <option value="JavaScript"></option>
+                                <option value="HTML 5"></option>
+                                <option value="CSS 3"></option>
+                                <option value="Web Standards"></option>
+
+                            </datalist>
+                            
+                        </input>
+                    </label>
+                    
+                    </p>
+                        <div>
+                            A little Keypad
+                        </div>
+                        <button>Tab</button><button>/</button><button>*</button><button>Back</button><br>
+                        <button>7</button><button>8</button><button>9</button><button>-</button><br>
+                        <button>4</button><button>5</button><button>6</button><button>+</button><br>
+                        <button>1</button><button>2</button><button>3</button><br>
+                        <button>0</button><button>Intro</button><br>
+                        </div>
+                    </p>
+                    <input type="submit" value="Submit now!">
+
+                    <!--
+                        Button:
+                        It allows us to set a button customized
+
+                        Note: Which option is better to use in forms button or input.type.submit?
+                        input is the best option also button has the option to work in the same way.
+                        Button we can use when we need other type of buttons inside our form different
+                        to submit the form, for example a little calculator
+                    -->
+                    <button type="submit">Press here!</button>
+                </form>
+
+            </section>
+
+            <!--
+                What's CSS?
+                Cascading Style Sheet, that the way that this file apply the styles to our html in cascading way,
+                Also cascading is the name of the algorithm that the browser apply those styles.
+                
+                Style means: Colours, dimensions, also allows to change the way to show the elements to our Html 
+                not only boxes, but other shapes.
+
+                HTML is the structure from our page and CSS is how we want that structure look like.
+           
+                Ways so add styles to out page 
+                1. Embedded Style: 
+                   Into tags, <h3 style="color: red; font-size: 30px;">CSS</h3> 
+
+                    Note: try to avoid that practice at less as possible we can, because it could be overwrite our 
+                          styles that has been setting in the head or in the external file
+
+                2. Stile tag:
+                    apply to this page setting up in the HEAD tag
+                    <style>
+                    //firs of all say to css which element we want to customized
+                        p {
+                            color: blue;
+                            font-size: 30px
+                        }
+                     </style>
+
+                3. Link tag: 
+                    global style in an external file also setting up in the HEAD tag 
+                   <link rel="stylesheet" href="./07_Index-y-estructura-basica/css/style.css">
+            -->
+            <section>
+                <article>
+                    <h3 style="color:lightseagreen;">CSS</h3>
+                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/css-html-js.jpg" alt="webpage-structure">
+                    </figure>
+                </article>
+            </section>
+        
+        
         </main>
 
         <!-- 
-            FOOTER area from this page according to the anatomy page.
+            FOOTER area:
+            According to the anatomy page, we can show the footer section of our page.
         -->
         <footer>
-
+            <p class="footer">
+                This site has been developed by <a href="https://github.com/borisbikes">borisbikes</a>. Please show the comments pressing <a href="#">F12</a> in elements section.
+                <img src="./07_Index-y-estructura-basica/media/images/mr-develop-blk.jpg" alt="mr-develop-ico" width="3%" height="3%">
+            </p>
         </footer>           
 
 

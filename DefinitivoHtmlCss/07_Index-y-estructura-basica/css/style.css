@@ -1,0 +1,59 @@
+/*
+What's CSS?
+Cascading Style Sheet, that the way that this file apply the styles to our html in cascading way,
+Also cascading is the name of the algorithm that the browser apply those styles.
+
+Style means: Colours, dimensions, also allows to change the way to show the elements to our Html 
+not only boxes, but other shapes.
+
+HTML is the structure from our page and CSS is how we want that structure look like.
+
+Ways so add styles to out page 
+1. Embedded Style: 
+   Into tags, <h3 style="color: red; font-size: 30px;">CSS</h3> 
+
+    Note: try to avoid that practice at less as possible we can, because it could be overwrite our 
+          styles that has been setting in the head or in the external file
+          
+2. Stile tag:
+    apply to this page setting up in the HEAD tag
+    <style>
+    //firs of all say to css which element we want to customized
+        p {
+            color: blue;
+            font-size: 30px
+        }
+     </style>
+
+3. Link tag: 
+    global style in an external file also setting up in the HEAD tag 
+   <link rel="stylesheet" href="./07_Index-y-estructura-basica/css/style.css">
+*/
+
+/*
+    Selector to tags
+*/
+p {
+    color: tomato;
+    font-size: 18px;
+}
+
+h3 {
+    color: darkorchid;
+    font-size: 22px;
+}
+/*
+    Selector to classes starting with dot '.'
+*/
+.footer{
+    color: seagreen;
+    font-size: 15;
+}
+
+/*
+    Selector to IDs starting with dot '#'
+*/
+
+#header-page{
+    color: cornflowerblue;
+}

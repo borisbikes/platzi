@@ -1,0 +1,42 @@
+h2{
+    color: chocolate;
+}
+
+h1{
+    color: maroon;
+}
+
+img{
+    border-radius: 40px;
+}
+
+.bg{
+    border-radius: 20px;
+    background-image: url("../../media/bk_groce.jpg");
+    background-position:bottom;
+    background-repeat: repeat-x;
+    background-size: 70%;
+    background-color: khaki;
+}
+
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 300px; 
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
