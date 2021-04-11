@@ -31,7 +31,7 @@ Ways so add styles to out page
 */
 
 /*
-    Selector to tags
+    Tag Selector, tag name: affects all tags with this name
 */
 p {
     color: tomato;
@@ -42,18 +42,124 @@ h3 {
     color: darkorchid;
     font-size: 22px;
 }
+
 /*
-    Selector to classes starting with dot '.'
+    Class selector,  starting with dot '.': 
+    This style affects just tags that have the attribute 'class' with this value
 */
-.footer{
+.footer {
     color: seagreen;
-    font-size: 15;
+    font-size: 10px;
 }
 
 /*
-    Selector to IDs starting with dot '#'
+    ID selector, starting with hash mark '#':
+    This style affects just tags that have the attribute 'id' with this value
+*/
+#header-page {
+    color: cornflowerblue;
+}
+
+
+/*
+    Pseudo classes  & Pseudo elements:
+    They are some attribute elements inside them that we could change
+    
+    class: define the style of an element special state 
+    e.g.
+    main-nav__item a:hover -> change the color when the mouse in over the link
+
+    elements:: define the style of an element specific part
+    e.g
+    main-nav__item a:active -> write something after the content of this element
+    
 */
 
-#header-page{
-    color: cornflowerblue;
+.main-nav {
+    margin-top: 10px; 
+    list-style: none; /*delete the dot bullets default style*/
+    padding-left: 0px; /*to the left margin align to the browser shape*/
+    background-color: darkolivegreen;
+}
+
+.main-nav__item {
+    display: inline-block; /*let the list in just one row*/
+}
+
+/*
+    Alter anchor tag style into the nav bar
+    That way allows us to sett up the tags into the specific class
+    in that case we only update style properties just <anchor> tag into the class 
+    .main-nav
+*/
+.main-nav__item a {
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none; /*let the underline default style*/
+}
+
+/*
+   pseudo-classes change a specific part of its behavior
+*/
+.main-nav__item a:hover {
+    color: orange; /*change to this color when the mouse in over the link  */
+}
+
+.main-nav__item a:active {
+    color: tomato; /*change to this color when the link is clicked*/
+}
+
+
+/*
+    pseudo-elements change a specific part of its structure 
+
+*/
+.main-nav__item a::after{
+    content: " | ";
+}
+
+.box-model {
+    width: 500px;
+    height: 150px;
+    border: 10px solid gray;
+    padding: 20px 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box-model h1 {
+    font-size: 30px;
+    
+}
+
+/*
+   
+    padding -> ( px ) -> just one parameter means the same measure to all sides
+    padding -> ( px, px) -> two parameters 1rs hight 2nd wight
+
+    to calculate the right margin for example
+    width = 100% we must sum the values to 
+    - margin 
+    - border
+    - padding
+
+    to RESET browser styles we use the universal selector asterisk 
+    margin and border both are only values to recalculate with the property 
+    *{
+        box-sizing: border-box; -> this property allows us to set a margin with 100% disable the horizontal scroll
+                                   recalculating the padding values and content width measure
+                                   in the case that we use margin in that case we must calculate the vales to disable the
+                                   horizontal  scroll
+
+        padding: 0;
+        margin: 0;
+    }
+*/
+.img-space img {
+    margin-left: 0;
+    padding-right: 20px;
+}
+
+.img-space {
+    margin-left: 0;
 }

@@ -551,7 +551,7 @@
 
             <!--
                 What's CSS?
-                Cascading Style Sheet, that the way that this file apply the styles to our html in cascading way,
+                Cascading Style Sheet, that the way that this file applies the styles to our html in cascading way,
                 Also cascading is the name of the algorithm that the browser apply those styles.
                 
                 Style means: Colours, dimensions, also allows to change the way to show the elements to our Html 
@@ -559,12 +559,12 @@
 
                 HTML is the structure from our page and CSS is how we want that structure look like.
            
-                Ways so add styles to out page 
+                Ways so add styles to our page 
                 1. Embedded Style: 
                    Into tags, <h3 style="color: red; font-size: 30px;">CSS</h3> 
 
                     Note: try to avoid that practice at less as possible we can, because it could be overwrite our 
-                          styles that has been setting in the head or in the external file
+                          styles that has been setting in the head or in the external file.
 
                 2. Stile tag:
                     apply to this page setting up in the HEAD tag
@@ -579,6 +579,8 @@
                 3. Link tag: 
                     global style in an external file also setting up in the HEAD tag 
                    <link rel="stylesheet" href="./07_Index-y-estructura-basica/css/style.css">
+
+                   @see<a href="./css/style.css">for more info follow this link to css file from this project</a>
             -->
             <section>
                 <article>
@@ -589,8 +591,130 @@
                 </article>
             </section>
         
+            /<!--
+                Right use of CSS
+
+                How could I apply some styles into some lists in one way and
+                How could I apply to another list other styles without affects the previous one ?
+                if I use li{} both lists would look like at the same.
+
+                BEM (Notation to give names into classes in CSS in a right way)
+
+            -->
+            <section>
+                <article>
+                    <h3>Pseudo classes & Pseudo elements</h3>
+                    <figure>
+                        <img src="./07_Index-y-estructura-basica/media/images/pseudo-elements.jpg" width="300px" height="300px"/>
+                    </figure>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes">Pseudo-classes</a></li>
+                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos">Pseudo-elements</a></li>
+                        <li><a href="https://en.bem.info/methodology/faq/#why-bem">BEM (Notation to give names into classes in CSS in a right way)</a></li>
+                    </ul>
+
+        <!--
+            Pseudo classes  & Pseudo elements:
+            They are some attribute elements inside them that we could change
+            
+            class: define the style of an element special state 
+            e.g.
+            main-nav__item a:hover -> change the color when the mouse in over the link
+
+            elements:: define the style of an element specific part
+            e.g
+            main-nav__item a:active -> write something after the content of this element
+        -->
+                    e.g.
+                    <nav>
+                        <ul class="main-nav">
+                            <li class="main-nav__item"><a href="#">Home</a></li>
+                            <li class="main-nav__item"><a href="#">Courses</a></li>
+                            <li class="main-nav__item"><a href="#">Teachers</a></li>
+                            <li class="main-nav__item"><a href="#">Blog</a></li>
+                        </ul>
+                    </nav>
+                </article>
+
+                <article>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Teachers</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </nav>
+                </article>
+            </section>
         
         </main>
+
+        <section>
+            <article>
+                <h3>Css Anatomy Rule</h3>
+                <figure>
+                    <img src="./07_Index-y-estructura-basica/media/images/css-rule-anatomy.png" alt="css-anatomy" height="100px" width="300px">
+                </figure>
+            </article>
+
+            <article>
+
+                <!--
+                    Box model sizing:
+                    Every HTML element is drawn into a box or square space. attributes top, bottom, left, right.
+                    -margin:  ------------- covers the box element outside
+                        - border: --------- is the line that limits this box
+                            -padding: ----- covers the space inside the box element
+                                -content: - text, images, videos. drives attributes  height, width
+
+
+                -->
+                <h3>Box Model</h3>
+                <figure class="img-space">
+                    <img src="./07_Index-y-estructura-basica/media/images/box-model.png" alt="box-sizing" width="324px" height="168px" >
+                    <img src="./07_Index-y-estructura-basica/media/images/box_model_eg.png" alt="css-anatomy" >
+                </figure>
+            </article>
+
+            
+            <article class="box-model">
+                
+                <h1>I'm a title</h1>
+                <div>
+                    <p>I'm a paragraph</p>
+                </div>
+                
+            </article>
+        </section>
+
+        <!--
+            Inheritance:
+            This way is like the Css cascade style allows to take properties from a parent tag or the next tag that
+            it has a value. But also parent tags could see  the values for their children. It means in both ways.
+                e.g 
+                we have in the h1 tag, the next parent tag is body, but if it doesn't have a value it's going to see 
+                the next upper parent tag in the example it'll look the html value.
+
+            when html we are saying all font size takes it at 75 %, but h1 has a different value from
+            the browser we need to use in h1 to make smallest text
+
+            html {
+                font-size: 75%;
+            }
+            h1 {
+                font-size: inherit;
+            }
+
+        -->
+        <section>
+            <article>
+                <h3>Css Inheritance</h3>
+                <figure>
+                    <img src="./07_Index-y-estructura-basica/media/images/css-inheritance.png" alt="css-inheritance" />
+                </figure>
+            </article>
+        </section>
 
         <!-- 
             FOOTER area:
@@ -599,13 +723,9 @@
         <footer>
             <p class="footer">
                 This site has been developed by <a href="https://github.com/borisbikes">borisbikes</a>. Please show the comments pressing <a href="#">F12</a> in elements section.
-                <img src="./07_Index-y-estructura-basica/media/images/mr-develop-blk.jpg" alt="mr-develop-ico" width="3%" height="3%">
+                <img src="./07_Index-y-estructura-basica/media/images/mr-develop-blk.jpg" alt="mr-develop-ico" width="30px" width="30px">
             </p>
         </footer>           
-
-
-        
-
 
     </body>
 </html>
