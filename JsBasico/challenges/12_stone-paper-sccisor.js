@@ -37,28 +37,31 @@ function whoWin(el1, el2){
     game.user1.gun = el1;
     game.user2.gun = el2;
 
+    
     if(el1 === el2){
         game.win = "draw";
-    }
-    if(el1 === game.gun.STONE && el2 === game.gun.PAPER){
-        game.win = game.user2.name;
-    }
-    if(el1 === game.gun.STONE && el2 === game.gun.SCISSOR){
-        game.win = game.user1.name;
-    }
-    if(el1 === game.gun.PAPER && el2 === game.gun.SCISSOR){
-        game.win = game.user2.name;
-    }
-    if(el1 === game.gun.PAPER && el2 === game.gun.STONE){
-        game.win = game.user1.name;
-    }
-    if(el1 === game.gun.SCISSOR && el2 === game.gun.STONE){
-        game.win = game.user2.name;
-    }
-    if(el1 === game.gun.SCISSOR && el2 === game.gun.PAPER){
-        game.win = game.user1.name;
-    }
 
+    }else{
+        
+        if(el1 === game.gun.STONE && el2 === game.gun.PAPER){
+            game.win = game.user2.name;
+        }
+        if(el1 === game.gun.STONE && el2 === game.gun.SCISSOR){
+            game.win = game.user1.name;
+        }
+        if(el1 === game.gun.PAPER && el2 === game.gun.SCISSOR){
+            game.win = game.user2.name;
+        }
+        if(el1 === game.gun.PAPER && el2 === game.gun.STONE){
+            game.win = game.user1.name;
+        }
+        if(el1 === game.gun.SCISSOR && el2 === game.gun.STONE){
+            game.win = game.user2.name;
+        }
+        if(el1 === game.gun.SCISSOR && el2 === game.gun.PAPER){
+            game.win = game.user1.name;
+        }
+    }
     console.log("fight : " + game.user1.name + " - " +  game.user1.gun + " vs " +  
                 game.user2.name + " - " +  game.user2.gun + 
                 " win : " + game.win);
