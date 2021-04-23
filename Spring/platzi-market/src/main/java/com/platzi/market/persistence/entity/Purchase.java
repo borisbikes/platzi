@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Entity
@@ -30,4 +31,18 @@ public class Purchase {
 
     @Column(name = "estado")
     private Boolean status;
+
+    /** Many Purchases done to one Customer, insertable and updatable are parameters
+     * that disable to modify any Customer from Purchase Entity.
+     * join column belongs to the field name that relates of Customer entity from this one.
+     */
+    @ManyToOne
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
+    private Customer customer;
+
+    /**
+     * To know which products were bought in this Purchase
+     */
+    @OneToMany(mappedBy = "product")
+    private List<PurchaseProduct> products;
 }

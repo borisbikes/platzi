@@ -3,6 +3,7 @@ package com.platzi.market.persistence.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -30,5 +31,11 @@ public class Customer {
 
     @Column(name = "estado")
     private String status;
+
+    /**
+     * Mapped by makes reference to the name of the field from Purchase Entity that has a relation
+     */
+    @OneToMany(mappedBy = "customer")
+    private List<Purchase> purchases;
 
 }

@@ -32,4 +32,10 @@ public class Product {
     @Column(name = "estado")
     private Boolean status;
 
+    /** Many Products belong to one Category, insertable and updatable are parameters
+     * that disable to modify any Category from Product Entity */
+    @ManyToOne
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    private Category category;
+
 }
