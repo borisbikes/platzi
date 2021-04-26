@@ -18,7 +18,7 @@ public class Product {
     private String name;
 
     @Column(name = "id_categoria")
-    private String idCategory;
+    private Integer idCategory;
 
     @Column(name = "codigo_barras")
     private String barCode;
