@@ -21,16 +21,13 @@ public class CustomerEntity {
     private String lastName;
 
     @Column(name = "celular")
-    private Integer mobile;
+    private String mobile;
 
     @Column(name = "direccion")
     private String address;
 
     @Column(name = "correo_electronico")
     private String email;
-
-    @Column(name = "estado")
-    private String status;
 
     /**
      * Mapped by makes reference to the name of the field from Purchase Entity that has a relation

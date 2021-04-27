@@ -29,7 +29,7 @@ public class PurchaseEntity {
     private String comment;
 
     @Column(name = "estado")
-    private Boolean status;
+    private String status;
 
     /** Many Purchases done to one Customer, insertable and updatable are parameters
      * that disable to modify any Customer from Purchase Entity.
