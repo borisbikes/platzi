@@ -8,10 +8,10 @@ import java.math.BigDecimal;
 @Data
 @Entity
 @Table(name = "compras_productos")
-public class PurchaseProduct {
+public class PurchaseProductEntity {
 
     @EmbeddedId
-    private PurchaseProductID id;
+    private PurchaseProductIDEntity id;
 
     @Column(name = "cantidad")
     private Integer quantity;
@@ -27,7 +27,7 @@ public class PurchaseProduct {
      */
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
-    private Purchase purchase;
+    private PurchaseEntity purchase;
 
     /** Many Products belongs to one Purchases Products, insertable and updatable are parameters
      * that disable to modify any Products from PurchaseProduct Entity.
@@ -35,7 +35,7 @@ public class PurchaseProduct {
      */
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
-    private Product product;
+    private ProductEntity product;
 }
 
 

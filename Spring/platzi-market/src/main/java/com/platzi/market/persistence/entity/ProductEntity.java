@@ -1,13 +1,18 @@
 package com.platzi.market.persistence.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "productos")
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -24,7 +29,7 @@ public class Product {
     private String barCode;
 
     @Column(name = "precio_venta")
-    private Double salePrice;
+    private BigDecimal salePrice;
 
     @Column(name = "cantidad_stock")
     private Integer stock;
@@ -36,6 +41,6 @@ public class Product {
      * that disable to modify any Category from Product Entity */
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
-    private Category category;
+    private CategoryEntity category;
 
 }

@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "clientes")
-public class Customer {
+public class CustomerEntity {
 
     @Id
     @Column(name = "id")
@@ -36,6 +36,6 @@ public class Customer {
      * Mapped by makes reference to the name of the field from Purchase Entity that has a relation
      */
     @OneToMany(mappedBy = "customer")
-    private List<Purchase> purchases;
+    private List<PurchaseEntity> purchases;
 
 }

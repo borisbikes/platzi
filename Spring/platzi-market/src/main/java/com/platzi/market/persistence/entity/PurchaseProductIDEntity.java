@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @Data
 @Embeddable
-public class PurchaseProductID implements Serializable {
+public class PurchaseProductIDEntity implements Serializable {
 
     @Column(name = "id_compra")
     private Integer idPurchase;

@@ -1,6 +1,5 @@
 package com.platzi.market.persistence.entity;
 
-import jdk.jfr.Enabled;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -10,7 +9,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "Compras")
-public class Purchase {
+public class PurchaseEntity {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
@@ -38,11 +37,11 @@ public class Purchase {
      */
     @ManyToOne
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
-    private Customer customer;
+    private CustomerEntity customer;
 
     /**
      * To know which products were bought in this Purchase
      */
     @OneToMany(mappedBy = "product")
-    private List<PurchaseProduct> products;
+    private List<PurchaseProductEntity> products;
 }
