@@ -26,6 +26,7 @@ public class PurchaseProductEntity {
      * join column belongs to the field name that relates of Purchase entity from this one.
      */
     @ManyToOne
+    @MapsId("id")
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
     private PurchaseEntity purchase;
 

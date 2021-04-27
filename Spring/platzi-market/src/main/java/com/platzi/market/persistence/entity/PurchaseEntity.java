@@ -42,6 +42,6 @@ public class PurchaseEntity {
     /**
      * To know which products were bought in this Purchase
      */
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "purchase", cascade = {CascadeType.ALL})
     private List<PurchaseProductEntity> products;
 }
