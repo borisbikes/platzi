@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Object Oriented CSS - Methodology</title>
+    </head>
+    <style>
+        
+        .header{
+            /*width: 100%;*/
+        }
+        .footer{
+            /*width: 100%;*/
+        }
+
+        /*Como vimos anteriormente estamos repitiendo la propiedad con el mismo valor, so
+         width: 100%; we're going to use this property in a global enviradment
+         Furthermore footer and header class we can specify properties that they're different*/
+        .globalwidth{
+            width: 100%;
+        }
+    </style>
+    <body>
+        <!-- header class="header">header</ !-->
+        <header class="header globalwidth">header</header>
+        <footer class="footer globalwidth">footer</footer>
+    </body>
+
+</html>
