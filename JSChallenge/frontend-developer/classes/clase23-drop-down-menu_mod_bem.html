@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Platzi Video</title>
+    </head>
+    <style>
+        
+        /*se declara margin cero para que tome desde el borde superior izquierdo del navegador*/
+        body{
+            background-color: #AB88FF;
+            margin: 0px;
+            
+        }
+
+        /*se utilizará medidas relativas para que se ajuste de acuerdo a la medida de la pantalla
+            paleta de colores ubicada https://coolors.co/5e1dfc-ab88ff-8f57fd-21c08b-e6af2e
+        */
+        .header{
+            background-color: #AB88FF;
+            width: 100%;
+            height: 80%;
+        }
+        
+        /*si se requiere estilizar un elemento dentro de unaetiqueta en especifico se puere utilizar anidamiento*/
+        .header__img{
+            width: 200px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .header__menu{
+            margin-right: 30px;
+        }
+
+        
+        .header__menu ul{
+            /*para que  no se muestre al principio*/
+            /*display: none;*/
+            /*permite eleiminar los bullets*/
+            list-style: none;
+            /*eliminar la alineacion por defecto del navegador a las listas*/
+            padding: 0px;
+            /*posisionamiento absoluto con referencia al elemento padre*/
+            position: absolute;
+            width: 100px;
+            text-align: right;
+            /*valores negativos permite correr el elemento en lado opuesto dosde se encuentra por defecto el box*/
+            margin: 0px 0px 0px -14px
+        }
+
+        /*separe la imagen del texto*/
+        .header__menu--profile{
+            margin-right: 8px;
+            width: 40px;
+        }
+
+    </style>
+    <body>
+        <header class="header">
+            <img class="header__img" src="img/logo-platzi-video-BW2.png" alt="platzi-video-icon">
+            <!--<div> que contendra el menu del usuario 'Perfil'"-->
+            <div class="header__menu"> 
+                <!--se debe dividir en 2 grupos de elementos de menu 'Perfil, 
+                    1. 'Perfil,colocar el mouse sobre el elemento menú principal 'Perfil' deplegará mubmenú
+                    2. Cuenta
+                       Cerrar Sesión-->
+                <div class="header__menu--profile">
+                    <img src="./img/user-icon.png" alt="user">
+                    <p>Profile</p>
+                </div>
+                
+                <div>
+                    <ul>
+                        <li><a href="/">Account</a></li>
+                        <li><a href="">Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section></section>
+    </body>
+</html>

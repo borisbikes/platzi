@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700;900&display=swap" rel="stylesheet"> 
+        <title>Platzi Video</title>
+    </head>
+    <style>
+        
+        body{
+            margin: 0px;
+            font-family: 'Mulish', sans-serif;
+            background-color: #8F57FD;
+            
+        }
+
+        .header{
+            background-color: #8F57FD;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header__img{
+            width: 200px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        .header__menu{
+            margin-right: 10px;
+        }
+
+        .header__menu ul{
+            display: none;
+            list-style: none;
+            padding: 0px;
+            position: absolute;
+            width: 100px;
+            text-align: right;
+            margin: -15px 0px 0px -10px
+        }
+
+        .header__menu:hover ul, ul:hover{
+            display: block;
+        }
+
+        .header__menu li{
+            margin: 10px 0px;
+        }
+
+        .header__menu li a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .header__menu li a:hover{
+            text-decoration: underline;
+        }
+
+        .header__menu--profile{
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header__menu--profile img{
+            margin-right: 8px;
+            width: 40px;
+            height: 40px
+
+        }
+        .header__menu--profile p{
+            margin-right: 0px;
+            color: white;
+        }
+
+        .search{
+            height: 300px;
+        }
+
+        .search__title{
+            color: white;
+            font-size: 20px;
+        }
+
+        .input{
+            /* rgba representa los colores rgb añadiendole trasparencia, en este caso se toma un blanco y casi traslucido para que tome el color del backround del body */
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid white;
+            border-radius: 25px;
+            color: white;
+            font-family: 'Mulish', sans-serif;
+            font-size: 14px;
+            height: 25px;
+            padding: 0px 20px;
+            width: 70%;
+            outline-width: 0;
+        }
+        ::placeholder{
+            color: white;
+        }
+
+    </style>
+    <body>
+        <header class="header">
+            <img class="header__img" src="img/logo-platzi-video-BW2.png" alt="platzi-video-icon">
+
+            <div class="header__menu"> 
+                
+                <div class="header__menu--profile">
+                    <img src="./img/user-icon.png" alt="user">
+                    <p>Profile</p>
+                </div>
+                
+                <div>
+                    <ul>
+                        <li><a href="/">Account</a></li>
+                        <li><a href="">Sign out</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </header>
+        <section class="search">
+            <h2 class="search__title">What would you like to watch today?</h2>
+            <!--atributo placeholder permite colocar texto dentro del elemento input para dar un ejempo o indicar que información se solicita-->
+            <!-- se retira notacion de bem a la clase class="search__input" por si se requiere reulitizar el estilo de este componente en otro modulo u pagina -->
+            <input class="input" type="text" placeholder="Search...">
+        </section>
+    </body>
+</html>
