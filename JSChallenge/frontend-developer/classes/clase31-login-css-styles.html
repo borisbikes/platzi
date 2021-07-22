@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__img" src="./img/logo-platzi-video-BW2.png" alt="logo">
+    </header>
+    <section class="login">
+
+        <section class="login__container">
+
+            <h2>Login</h2>
+            <form class="login__container--form">
+
+                <input class="input" type="text" placeholder="Mail">
+                <input class="input" type="password" placeholder="Password">
+                <button class="button">Login</button>
+
+                <div class="login__container--remember-me">
+                    <label>
+                        <input id="chbox1" type="checkbox" name="remember-me" value="">Remember me</label>
+                    </label>
+                    <a href="/">I forgot my password</a>
+                </div>
+
+            </form>
+
+                <section class="login__container--social-media">
+                    <div><img src="./img/google-icon.png" alt="google-icon">Login with Google</div>
+                    <div><img src="./img/twitter-icon.png" alt="twitter-icon">Login with Twitter</div>
+                </section>
+
+                <p class="login__container--register">You don't have any account <a href="/">Sign In</a> </p>
+
+        </section>
+
+    </section>
+    
+    <!--este pie de página no hara pare de ligin sino sera un componente reutilizable , x esa razon nose 
+    maneja nomenglatura BEM-->
+    <footer class="footer">
+        <a href="/">Terms of use</a>
+        <a href="/">Privacy protection</a>
+        <a href="/">Help section</a>
+    </footer>
+</body>
+</html>
