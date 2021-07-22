@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+    <title>Carousel 1</title>
+</head>
+<style>
+    body{
+        margin:0px;
+        font-family: 'Mulish', sans-serif;
+    }
+    .carousel{
+        width: 100%;
+        /* propiedad para general scroll de manera horizontal cuando exceda el numero de imagenes en el ancho de la pantalla */
+        overflow: scroll;
+        padding: 30px;
+        /* permite que los elementos hijos se posicionen a partir de este elemento */
+        position: relative;
+
+    }
+
+    .carousel__container{
+        /*propiedad que permite a los elementos de este contenedor desplazarce libremente al lado derecho, es decir si encuentra el final del borde derecho de la ventana
+        del navegador no realice un salto de linea, sino que nontinue libremente*/
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel-item{
+        background-color: mediumseagreen;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        /* por defecto el navegador trae la propiedad del diplay la distribucion de arriba hacia abajo, en este caso lo deseamos que se incremente hacia la derecha */
+        display: inline-block;
+        /* cuando se coloque el mouse sobre este item va  acambiar la flecha por una mano */
+        cursor: pointer;
+        /* hace referencia a un tiempo de la transicion*/
+        transition: 450ms all;
+        /* inicide desde el centro y realice un movimiento hacia la izquierda */
+        transform-origin: center left;
+        position: relative;
+    }
+
+    /* ~ vegülilla permite indicar que cuando se retire el mouse vuelva a su estado inicial */
+    .carousel-item:hover ~ .carousel-item{
+        /* ver clase de platzi acerca animaciones, el desplazamiento se realizará hacia la derecha */
+        transform: translate3d(100px, 0, 0);
+    }
+
+    /* ~ vegülilla permite indicar cuando se active el hover de una imagen las demas se opaquen */
+    .carousel__container:hover .carousel-item{
+        opacity: 0.3;
+    }
+    
+    /* permitira darle un pequeño zoom a la imagen cuando se realice el hover */
+    .carousel__container:hover .carousel-item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+    .carousel-item__img{
+        width: 200px;
+        height: 250px;
+        /* permite recobrar proporciones de la imagen */
+        object-fit: cover;
+    }
+
+    .carousel-item__details{
+        /* devanecer entre 2 colores entre trasparente a un color oscuro*/
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+        font-size: 10px;
+        opacity: 1;
+        /* realice una transición del sobreado de la imagen progrsivamente en este intervalo de tiempo*/
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 167px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+
+    }
+
+    .carousel-item__details img{
+        width: 20px;
+        height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-item__details p{
+        margin-top: -8px;
+    }
+        
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" 
+                src="https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="people">
+                <!--contenedor que mostrará la descripción individual de cada pelicula rating-->
+                <div class="carousel-item__details">
+                    <!--imagen de los iconos para calificar la peli-->
+                    <div>
+                        <img src="./img/play-icon.png" alt="play_button"/> 
+                        <img src="./img/plus-icon.png" alt="plus_button"/> 
+                    </div>
+                    <p class="carousel-item__details--title">Description title</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 min</p>
+
+                </div>
+            </div>
+            <div class="carousel-item"></div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

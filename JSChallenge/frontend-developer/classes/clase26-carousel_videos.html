@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel 1</title>
+</head>
+<style>
+    body{
+        margin:0px;
+    }
+    .carousel{
+        width: 100%;
+        /* propiedad para general scroll de manera horizontal cuando exceda el numero de imagenes en el ancho de la pantalla */
+        overflow: scroll;
+        padding: 30px;
+        /* permite que los elementos hijos se posicionen a partir de este elemento */
+        position: relative;
+
+    }
+
+    .carousel__container{
+        /*propiedad que permite a los elementos de este contenedor desplazarce libremente al lado derecho, es decir si encuentra el final del borde derecho de la ventana
+        del navegador no realice un salto de linea, sino que nontinue libremente*/
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+
+    .carousel__item{
+        background-color: mediumseagreen;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        /* por defecto el navegador trae la propiedad del diplay la distribucion de arriba hacia abajo, en este caso lo deseamos que se incremente hacia la derecha */
+        display: inline-block;
+        /* cuando se coloque el mouse sobre este item va  acambiar la flecha por una mano */
+        cursor: pointer;
+        /* hace referencia a un tiempo de la transicion*/
+        transition: 450ms all;
+        /* inicide desde el centro y realice un movimiento hacia la izquierda */
+        transform-origin: center left;
+    }
+
+    /* ~ vegülilla permite indicar que cuando se retire el mouse vuelva a su estado inicial */
+    .carousel__item:hover ~ .carousel__item{
+        /* ver clase de platzi acerca animaciones, el desplazamiento se realizará hacia la derecha */
+        transform: translate3d(100px, 0, 0);
+    }
+
+    /* ~ vegülilla permite indicar cuando se active el hover de una imagen las demas se opaquen */
+    .carousel__container:hover .carousel__item{
+        opacity: 0.3;
+    }
+    
+    /* permitira darle un pequeño zoom a la imagen cuando se realice el hover */
+    .carousel__container:hover .carousel__item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+
+
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel__item"></div>
+            <div class="carousel__item"></div>
+        </div>
+
+    </section>
+    
+</body>
+</html>
