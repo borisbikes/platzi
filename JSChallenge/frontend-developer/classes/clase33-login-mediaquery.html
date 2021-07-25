@@ -7,54 +7,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700;900&display=swap" rel="stylesheet"> 
-    <title>Login</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Login - Movil Fist</title>
 </head>
-<style>
-        body{
-            margin: 0px;
-            font-family: 'Mulish', sans-serif;
-            
-        }
 
-        .header{
-            background-color: #21c08b;
-            width: 100%;
-            height: 80%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .header__img{
-            width: 200px;
-            margin-top: 10px;
-            margin-left: 10px;
-        }
-</style>
 <body>
     <header class="header">
         <img class="header__img" src="./img/logo-platzi-video-BW2.png" alt="logo">
     </header>
     <section class="login">
+
         <section class="login__container">
+
             <h2>Login</h2>
             <form class="login__container--form">
+
                 <input class="input" type="text" placeholder="Email">
                 <input class="input" type="password" placeholder="Password">
                 <button class="button">Login</button>
+
                 <div class="login__container--remember-me">
                     <label>
                         <input id="chbox1" type="checkbox" name="remember-me" value="">Remember me</label>
                     </label>
-                    <a href="/">I´ve forgotten my password</a>
+                    <a href="/">I forgot my password</a>
                 </div>
+
             </form>
 
-            <section class="login__container--social-media">
-                <div><img src="./img/google-icon.png" alt="google-icon">Login with Google account</div>
-                <div><img src="./img/twitter-icon.png" alt="twitter-icon">Login with Twitter account</div>
-            </section>
-            <p class="login__container--register">You don't have any account <a href="/">Sing up</a> </p>
+                <section class="login__container--social-media">
+                    <div><img src="./img/google-icon.png" alt="google-icon">Login with Google</div>
+                    <div><img src="./img/twitter-icon.png" alt="twitter-icon">Login with Twitter</div>
+                </section>
+
+                <p class="login__container--register">You don't have any account <a href="/">Sign In</a> </p>
+
         </section>
 
     </section>
