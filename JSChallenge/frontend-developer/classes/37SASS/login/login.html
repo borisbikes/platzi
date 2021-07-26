@@ -13,17 +13,19 @@
 
 <body>
     <header class="header">
-        <img class="header__img" src="../assets/logo-platzi-video-BW2.png" alt="logo">
+        <!--the attribute tabindex allows us to set an order to reader -->
+        <img tabindex="0" class="header__img" src="../assets/logo-platzi-video-BW2.png" alt="logo">
     </header>
     <section class="login">
 
         <section class="login__container">
-
-            <h2>Login</h2>
+            <!--the attribute tabindex allows us to set an order to reader -->
+            <h2 tabindex="0">Login</h2>
             <form class="login__container--form">
 
-                <input class="input" type="text" placeholder="Mail">
-                <input class="input" type="password" placeholder="Password">
+                <!--attribute area-label allows us to add a reader label when in this case we don have a label for our design-->
+                <input aria-label="Email" class="input" type="text" placeholder="Email">
+                <input aria-label="Password" class="input" type="password" placeholder="Password">
                 <button class="button">Login</button>
 
                 <div class="login__container--remember-me">
