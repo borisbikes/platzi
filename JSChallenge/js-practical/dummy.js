@@ -154,3 +154,13 @@ numbers.forEach(printer);
 function printer(value){
     console.log(value);
 };
+
+
+//7 array how to find how many times is repeated a numberlet counter = 1;
+
+ for(let i= 1; i < n; i++ ){
+    if (triangle[i] == tempSide)
+       counter++;
+   else
+       tempSide = triangle[i];
+}
