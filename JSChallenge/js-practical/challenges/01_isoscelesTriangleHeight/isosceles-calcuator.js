@@ -14,7 +14,7 @@
  * 
  * Solution:.
  * Triangle isosceles is that has 2 equal sides,
- * To calculate the height we must to use the Pythagoras theorem a2 + b2 = c2
+ * To calculate the height through the Pythagoras theorem a2 + b2 = c2
  *  */ 
 console.group("html");
 
@@ -75,10 +75,8 @@ function calculateHeightTriangle(){
     }else{
         alert(message);
     }
-    
 
 }
-
 
 
 console.groupEnd();
