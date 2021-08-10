@@ -164,3 +164,53 @@ function printer(value){
    else
        tempSide = triangle[i];
 }
+
+
+
+console.group('Arrays');
+
+// for of -> works as a for each
+
+const cars = ["BMW", "Mini", "Tesla"];
+let tex = "";
+for(let c of cars){
+    tex += c + "; ";
+}
+console.log(tex);
+//BMW; Mini; Tesla;
+
+// for in -> loop throw the properties of an Object
+const car = {
+    model: 2018,
+    licencePlate: 'CVM-123',
+    color: 'red'
+};
+
+let tex = "";
+for(let x in car){
+    tex += x + "; ";
+}
+console.log(tex);
+//model; licencePlate; color; 
+
+
+//filter method 
+
+var articles = [
+    { name: 'Bicycle', price: 3000 },
+    { name: 'TV', price: 250 },
+    { name: 'Book', price: 320 },
+    { name: 'Phone', price: 4000 },
+    { name: 'Laptop', price: 20000 },
+    { name: 'Keyboard', price: 500 },
+
+];
+
+const filterArticles = articles.filter(
+    function(article){
+        return article.price <= 1000;
+    }
+);
+
+console.log(filterArticles);
+
