@@ -9,7 +9,7 @@
             "name": "Launch Chrome",
             "request": "launch",
             "type": "pwa-chrome",
-            "url": "http://127.0.0.1:5500/JSChallenge/js-practical/14_statistics-measures/average.html",
+            "url": "http://127.0.0.1:5500/JSChallenge/js-practical/19_salary-analysis/salaries.html",
             
             "webRoot": "${workspaceFolder}"
         }
